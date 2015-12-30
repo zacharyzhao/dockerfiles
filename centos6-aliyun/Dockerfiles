@@ -1,5 +1,5 @@
 # Populate a centos 6.5 "dev" box using aliyun mirrored yum repo
-FROM centos:6
+FROM daocloud.io/library/centos:6
 MAINTAINER Zachary Zhao
 VOLUME /home /root
 RUN sed -i 's/enabled=1/enabled=0/' /etc/yum/pluginconf.d/fastestmirror.conf

@@ -1,7 +1,6 @@
 FROM daocloud.io/zachary/images-dev-minimal:latest
 MAINTAINER Zachary Zhao
 VOLUME /home /root
-RUN yum install -y wget
 RUN wget http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm -P /tmp/
 RUN rpm -ivh /tmp/mysql57-community-release-el6-7.noarch.rpm
 RUN yum -y install httpd php php-mysql mysql mysql-server

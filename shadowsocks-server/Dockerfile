@@ -13,12 +13,6 @@ RUN mkdir -p /export/servers
 
 RUN tar -C /export/servers -xzf /tmp/shadowsocks-server.tar.gz
 
-RUN cp /export/servers/shadowsocks-server/etc/config.json.sample /export/servers/shadowsocks-server/etc/config.json
-
-RUN sed -E -i 's/__PRIVATE_PASSWD__/8300/g' /export/servers/shadowsocks-server/etc/config.json
-
-RUN sed -E -i 's/__PUBLIC_PASSWD__/8390/g' /export/servers/shadowsocks-server/etc/config.json
-
 COPY boot.sh /tmp/
 
 ENTRYPOINT ["/tmp/boot.sh"]
